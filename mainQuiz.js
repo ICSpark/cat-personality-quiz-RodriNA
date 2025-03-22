@@ -82,10 +82,11 @@ function loadQuestion(ID) {
     
     // Step 1
     let questionText = document.getElementById('question-text');
-    
+    let questionImage =  document.getElementById('question-image')
+    let questionChoices = document.getElementById('choices')
     // Step 2
     questionText.innerHTML = questions[ID].text;
-    
+       questionImage.src = questions[ID].image;
     // Step 6
     
     for (const [choice, personality] of Object.entries(questions[ID].choices)) {
@@ -159,3 +160,4 @@ console.log("Welcome to the Personality Quiz!");
 console.log(personalities);
 console.log(questions);
 window.startGame = startGame;
+
